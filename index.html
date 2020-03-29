@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Michal Kyjovsky</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main/main.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">Michal Kyjovsky</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="#">school</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <section class="hero">
+            <div class="inner">
+                <div class="clipper">
+                    <h1>Let's do something fun</h1>
+                </div>
+
+                <div class="anim-panel">
+                    <p>It is my pleasure to welcome you on my personal web. There is nothing to see at all, but everything is in progress! :)</p>
+                    <a href="about.html" class="read-btn primary">Explore</a>
+                </div>
+            </div>
+        </section>
+        <section class="sidebar">
+            <div class="inner">
+                <div class="clipper">
+                    <h2>News</h2>
+                </div>
+
+                <div class="anim-panel">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="read-btn">Read More</a>
+                </div>
+            </div>
+        </section>
+        <section class="contact">
+            <div class="inner">
+                <div class="clipper">
+                    <h2>Contact</h2>
+                </div>
+                <div class="anim-panel">
+                    <p>Contact me anytime, anywhere.</p>
+                    <a href="mailto:michalkyjovsky@hotmail.com"><img src="Pictures/mail.svg" alt="MailLink" height="42" width="42"></img>
+                    </a>
+                    <a href="https://github.com/MichalKyjovsky" target="blank"><img src="Pictures/glab.svg" alt="GitLabLink" height="42" width="42"></img>
+                    </a>
+                    <a href="https://www.linkedin.com/in/michal-kyjovsky/" target="blank"><img src="Pictures/linkedin.svg" alt="LinkedInLink" width="42" height="42"></img>
+                    </a>
+                    <a href="https://www.facebook.com/michal.kyjovsky.714" target="blank"><img src="Pictures/facebook.svg" alt="FacebookLink" width="42" height="42"></img>
+                    </a>
+
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+
+            window.addEventListener("load", function(e) {
+
+                document.body.style.display = "block";
+
+                var tl = new TimelineMax();
+
+                tl.staggerFrom('section', 2, {
+                    opacity: 0,
+                    scale: .5,
+                    ease: Power2.easeOut
+                }, 0.2)
+
+                tl.staggerFrom('h1, h2', .5, {
+                    opacity: 0,
+                    y: -40,
+                    ease: Power2.easeInOut
+                }, 0.2, "-=2")
+
+                tl.staggerFrom('.anim-panel', 1, {
+                    opacity: 0,
+                    y: -40,
+                    ease: Power2.easeInOut
+                }, 0.2, "-=1.5")
+            }, false);
+        });
+    </script>
+</body>
+
+</html>
